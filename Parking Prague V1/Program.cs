@@ -3,9 +3,12 @@
 class PragueParking
 {
     static string[] parkingGarage = new string[100];
+    
 
     static void Main(string[] args)
     {
+        Console.WriteLine("\nHej och välkommen, vad heter du?");
+        string namn = Console.ReadLine();   
         while (true)
         {
             ShowMenu();
@@ -15,7 +18,8 @@ class PragueParking
 
     static void ShowMenu()
     {
-        Console.WriteLine("Välkommen till Prag Slottsparkering!");
+        Console.WriteLine("Välkommen till Prag Slottsparkering!\nVad vill du göra idag");
+        Console.WriteLine("Vad villd du göra idag? ");
         Console.WriteLine("1. Lägga till fordon");
         Console.WriteLine("2. Flytta fordon");
         Console.WriteLine("3. Ta bort fordon");

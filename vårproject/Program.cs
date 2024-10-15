@@ -1,6 +1,4 @@
 ﻿using System;
-using System.ComponentModel.Design;
-using System.Globalization;
 using System.Text.RegularExpressions;
 
 
@@ -8,14 +6,10 @@ class PragueParking
 {
     static string[] parkingGarage = new string[100];
 
-    
-
 
     static void Main(string[] args)
     {
 
-        
-        
         while (true)
         {
             ShowMenu();
@@ -64,10 +58,8 @@ class PragueParking
                 break;
 
             case "7":
-                Avsluta();
+                Environment.Exit(0);
                 break;
-                    
-                
 
             default:
                 Console.WriteLine("ogiltig val");
@@ -280,32 +272,6 @@ class PragueParking
 
 
         }
-    }
-
-    static void Avsluta()
-    {
-        Console.WriteLine("Är du säker?\n");
-        string shutdown = Console.ReadLine();
-
-        if (shutdown.Equals("nej", StringComparison.OrdinalIgnoreCase))
-        {
-            Console.WriteLine("\n\n-------------------------\n\n");
-            break;
-
-        }
-        else if (shutdown.Equals("ja", StringComparison.OrdinalIgnoreCase))
-        {
-            Console.WriteLine("\nVälkommen åter, kör försiktigt!");
-            Environment.Exit(0);
-            break;
-        }
-        else
-        {
-            Console.WriteLine("Ogiltigt val");
-            Console.WriteLine("\n\n-------------------------\n\n");
-            break;
-        }
-        return;
     }
 
 
